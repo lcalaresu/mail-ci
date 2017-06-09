@@ -38,6 +38,7 @@ RUN apk --no-cache add  \
         php7-soap \
         php7-xdebug \
         php7-pcntl \
+        php7-simplexml \
         php7-ctype \
         php7-session \
         php7-tokenizer \

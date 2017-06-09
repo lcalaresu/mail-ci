@@ -15,6 +15,8 @@ RUN apk --no-cache add  \
         docker \
         unzip \
         libxml2-utils \
+        gcc \
+        make \
         php7 php7-xml \
         php7-exif \
         php7-zip \

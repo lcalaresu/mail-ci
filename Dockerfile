@@ -50,5 +50,5 @@ RUN apk --no-cache add  \
 
 COPY entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["--help"]
 
+CMD ["--help"]

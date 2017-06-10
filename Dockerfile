@@ -12,7 +12,7 @@ RUN apt-get update \
         wget \
         openssl \
         rsync \
-        docker \
+        docker-ce \
         unzip \
         libxml2-utils \
         gcc \

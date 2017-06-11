@@ -28,11 +28,21 @@ RUN apt-get update \
         unzip \
         libxml2-utils \
         gcc \
-        make 
+        make \
+        libpng-dev 
+
+RUN docker-php-ext-install mbstring
+RUN docker-php-ext-install zip
+RUN docker-php-ext-install gd
 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"  \
     && php composer-setup.php \
     && php -r "unlink('composer-setup.php');"
+
+# override phpunit and put binary into $PATH
+RUN curl -sSLo phpunit.phar https://phar.phpunit.de/phpunit-5.7.phar \
+    && chmod 755 phpunit.phar \
+    && mv phpunit.phar /usr/local/bin/ 
 
 COPY entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["entrypoint.sh"]

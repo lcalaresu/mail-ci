@@ -3,6 +3,7 @@ MAINTAINER Luc Calaresu <dev@calaresu.com>
 
 WORKDIR /tmp
 
+# install docker
 RUN apt-get update \
   && apt-get install -y \
      apt-transport-https \

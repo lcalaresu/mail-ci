@@ -16,6 +16,8 @@ RUN add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/debian \
    $(lsb_release -cs) \
    stable"
+
+# install some other dependencies
 RUN apt-get update \
     && apt-get install -y bash \
         ca-certificates \
